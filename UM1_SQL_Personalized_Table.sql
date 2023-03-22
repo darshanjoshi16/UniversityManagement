@@ -16,11 +16,11 @@ CREATE TABLE Student_Personal_Details
 	Student_DOB  DATE NOT NULL ,
 	Student_Phone VARCHAR(15) NOT NULL,
 	Student_Address VARCHAR(25) NOT NULL,
-	Created_Date VARCHAR(20) NOT NULL CONSTRAINT Default_Date DEFAULT CONVERT(VARCHAR(10),GETDATE(),105),
+	Created_Date DATE NOT NULL CONSTRAINT Default_Date DEFAULT GETDATE(),
 	CreatedBy VARCHAR(20) NOT NULL DEFAULT SYSTEM_USER,
-	Modified_Date VARCHAR(20),
+	Modified_Date DATE,
 	ModifiedBy VARCHAR(15),
-	Deleted_Date VARCHAR(20),
+	Deleted_Date DATE,
 	DeletedBy VARCHAR(15)
 )
 
@@ -39,16 +39,16 @@ CREATE TABLE Professor_Personal_Details
 	Prof_Phone VARCHAR(15) NOT NULL,
 	Prof_DOJ DATE NOT NULL,
 	Prof_Address VARCHAR(25) NOT NULL,
-	Created_Date VARCHAR(20) NOT NULL DEFAULT CONVERT(VARCHAR(10),GETDATE(),105),
+	Created_Date DATE NOT NULL DEFAULT GETDATE(),
 	CreatedBY VARCHAR(20) NOT NULL DEFAULT SYSTEM_USER,
-	Modified_Date VARCHAR(20),
+	Modified_Date DATE,
 	ModifiedBy VARCHAR(15),
-	Deleted_Date VARCHAR(20),
-	DeletedBy VARCHAR(15)
+	Deleted_Date DATE,
+	DeletedBy VARCHAR(20)
 )
 
 --incase we need to drop the table
--- DROP TABLE Professor_Personal_Details
+ --DROP TABLE Professor_Personal_Details
 
 --===============================================================================================================================================
 
@@ -62,16 +62,16 @@ CREATE TABLE Staff_Personal_Details
 	Staff_Phone VARCHAR(15) NOT NULL,
 	Staff_DOJ DATE NOT NULL,
 	Staff_Address VARCHAR(25) NOT NULL,
-	Created_Date VARCHAR(20) NOT NULL DEFAULT CONVERT(VARCHAR(10),GETDATE(),105),
+	Created_Date DATE NOT NULL DEFAULT GETDATE(),
 	CreatedBY VARCHAR(20) NOT NULL DEFAULT SYSTEM_USER,
-	Modified_Date VARCHAR(20),
+	Modified_Date DATE,
 	ModifiedBy VARCHAR(15),
-	Deleted_Date VARCHAR(20),
+	Deleted_Date DATE,
 	DeletedBy VARCHAR(15)
 )
 
 --incase we need to delete the table
--- DROP TABLE Staff_Personal_Details
+--DROP TABLE Staff_Personal_Details
 
 
 
